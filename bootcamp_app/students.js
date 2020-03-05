@@ -1,3 +1,7 @@
+/*
+  App config
+*/
+
 const { Pool } = require('pg');
 
 const pool = new Pool({
@@ -6,6 +10,10 @@ const pool = new Pool({
   host: 'localhost',
   database: 'bootcampx'
 });
+
+/*
+  Queries
+*/
 
 pool.query(`
 SELECT students.id, students.name, cohorts.name as cohort
